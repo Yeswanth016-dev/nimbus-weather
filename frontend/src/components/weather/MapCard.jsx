@@ -54,21 +54,35 @@ const MapCard = ({ latitude, longitude, label }) => {
   };
 
   const handleMyLocation = async () => {
-    setGpsStatus('locating');
-    const result = await locate();
-    if (result.error || !mapRef.current) {
-      setGpsStatus('ready');
-      return;
-    }
-    mapRef.current.setView([result.latitude, result.longitude], 13);
-    window.L.circleMarker([result.latitude, result.longitude], {
-      radius: 7,
-      color: '#5EC8D8',
-      fillColor: '#5EC8D8',
-      fillOpacity: 0.8,
-    }).addTo(mapRef.current);
-    setGpsStatus('locked');
-  };
+  setGpsStatus("locating");
+
+  const result = await locate();
+
+  if (result.error) {
+    alert(result.error);
+    setGpsStatus("ready");
+    return;
+  }
+
+  if (!mapRef.current) {
+    setGpsStatus("ready");
+    return;
+  }
+
+  mapRef.current.flyTo([result.latitude, result.longitude], 13, {
+    animate: true,
+    duration: 2,
+  });
+
+  if (markerRef.current) {
+    markerRef.current.setLatLng([result.latitude, result.longitude]);
+    markerRef.current
+      .bindPopup("<strong>Your Current Location</strong>")
+      .openPopup();
+  }
+
+  setGpsStatus("locked");
+};
 
   return (
     <div className="panel overflow-hidden p-4">

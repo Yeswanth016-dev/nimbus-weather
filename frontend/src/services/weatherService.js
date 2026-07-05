@@ -53,7 +53,7 @@ export const getHistoryRange = async ({ location, startDate, endDate, sessionId 
 };
 
 export const exportUrl = (format, sessionId) => {
-  const base = import.meta.env.VITE_API_BASE_URL || 'http://localhost:5000/api';
+  const base = import.meta.env.VITE_API_BASE_URL || 'http://localhost:5001/api';
   const query = sessionId ? `?sessionId=${encodeURIComponent(sessionId)}` : '';
   return `${base}/weather/export/${format}${query}`;
 };

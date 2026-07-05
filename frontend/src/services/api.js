@@ -5,7 +5,7 @@ import axios from 'axios';
  * env so it can point at a different host in production without code changes.
  */
 const api = axios.create({
-  baseURL: import.meta.env.VITE_API_BASE_URL || 'http://localhost:5000/api',
+  baseURL: import.meta.env.VITE_API_BASE_URL || 'http://localhost:5001/api',
   timeout: 15000,
 });
 

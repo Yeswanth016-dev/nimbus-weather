@@ -26,7 +26,7 @@ const Footer = () => {
         </div>
       </div>
       <p className="pb-8 text-center text-xs text-atmosphere-400 dark:text-mist-200/40">
-        Nimbus Weather &middot; Built for demonstration purposes &middot; Not affiliated with any third-party weather brand.
+        PMA Weather &middot; Built for demonstration purposes &middot; Not affiliated with any third-party weather brand.
       </p>
     </footer>
   );

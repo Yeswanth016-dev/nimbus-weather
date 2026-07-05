@@ -6,7 +6,7 @@ import mongoose from 'mongoose';
  */
 const connectDB = async () => {
   try {
-    const uri = process.env.MONGO_URI || 'mongodb://127.0.0.1:27017/nimbus_weather';
+    const uri = process.env.MONGO_URI || 'mongodb://127.0.0.1:27017/PMA_weather';
     const conn = await mongoose.connect(uri);
     console.log(`[MongoDB] Connected: ${conn.connection.host}/${conn.connection.name}`);
   } catch (error) {

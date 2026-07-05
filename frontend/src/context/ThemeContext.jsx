@@ -4,7 +4,7 @@ const ThemeContext = createContext(null);
 
 export const ThemeProvider = ({ children }) => {
   const [theme, setTheme] = useState(() => {
-    const stored = window.localStorage.getItem('nimbus_theme');
+    const stored = window.localStorage.getItem('PMA_theme');
     if (stored) return stored;
     return window.matchMedia('(prefers-color-scheme: dark)').matches ? 'dark' : 'light';
   });
@@ -12,7 +12,7 @@ export const ThemeProvider = ({ children }) => {
   useEffect(() => {
     const root = window.document.documentElement;
     root.classList.toggle('dark', theme === 'dark');
-    window.localStorage.setItem('nimbus_theme', theme);
+    window.localStorage.setItem('PMA_theme', theme);
   }, [theme]);
 
   const toggleTheme = () => setTheme((prev) => (prev === 'dark' ? 'light' : 'dark'));

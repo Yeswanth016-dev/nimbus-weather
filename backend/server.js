@@ -7,7 +7,7 @@ const PORT = process.env.PORT || 5001;
 const start = async () => {
   await connectDB();
   app.listen(PORT, () => {
-    console.log(`[Server] Nimbus Weather API listening on port ${PORT}`);
+    console.log(`[Server] PMA Weather API listening on port ${PORT}`);
   });
 };
 

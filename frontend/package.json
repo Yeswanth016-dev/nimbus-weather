@@ -1,7 +1,7 @@
 {
-  "name": "nimbus-weather-frontend",
+  "name": "PMA-weather-frontend",
   "version": "1.0.0",
-  "description": "Nimbus Weather - React + Vite frontend",
+  "description": "PMA Weather - React + Vite frontend",
   "type": "module",
   "scripts": {
     "dev": "vite",

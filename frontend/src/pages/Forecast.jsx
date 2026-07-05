@@ -28,7 +28,7 @@ const Forecast = ({ initialRecord }) => {
   const [loading, setLoading] = useState(false);
   const [error, setError] = useState(null);
   const [lastQuery, setLastQuery] = useState(null);
-  const [recents, setRecents] = useLocalStorage('nimbus_recent_searches', []);
+  const [recents, setRecents] = useLocalStorage('pma_recent_searches', []);
   const [pinnedRefreshKey, setPinnedRefreshKey] = useState(0);
 
   const { locate, loading: locating } = useGeolocation();

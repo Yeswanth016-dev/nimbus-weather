@@ -16,7 +16,7 @@ const Header = ({ view, onViewChange }) => {
             <Gauge size={19} strokeWidth={2.2} />
           </div>
           <div className="leading-tight">
-            <p className="font-display text-lg font-semibold tracking-tight">Nimbus</p>
+            <p className="font-display text-lg font-semibold tracking-tight">PMA</p>
             <p className="eyebrow -mt-0.5">Live Weather Instrument</p>
           </div>
         </div>

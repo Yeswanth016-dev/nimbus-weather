@@ -31,7 +31,7 @@ app.get('/api/health', (req, res) => {
   const states = ['disconnected', 'connected', 'connecting', 'disconnecting'];
   res.json({
     success: true,
-    message: 'Nimbus Weather API is running',
+    message: 'PMA Weather API is running',
     time: new Date().toISOString(),
     database: {
       status: states[mongoose.connection.readyState] || 'unknown',

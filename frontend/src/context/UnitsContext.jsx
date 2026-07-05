@@ -3,12 +3,12 @@ import { createContext, useContext, useState } from 'react';
 const UnitsContext = createContext(null);
 
 export const UnitsProvider = ({ children }) => {
-  const [unit, setUnit] = useState(() => window.localStorage.getItem('nimbus_unit') || 'metric');
+  const [unit, setUnit] = useState(() => window.localStorage.getItem('PMA_unit') || 'metric');
 
   const toggleUnit = () => {
     setUnit((prev) => {
       const next = prev === 'metric' ? 'imperial' : 'metric';
-      window.localStorage.setItem('nimbus_unit', next);
+      window.localStorage.setItem('PMA_unit', next);
       return next;
     });
   };

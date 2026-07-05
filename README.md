@@ -135,7 +135,7 @@ weather-app/
 cd backend
 npm install
 cp .env.example .env   # fill in your values
-npm run dev             # http://localhost:5000
+npm run dev             # http://localhost:5001
 ```
 
 ### Frontend
@@ -157,7 +157,7 @@ Open `http://localhost:5173` in your browser.
 ### `backend/.env`
 | Variable | Description | Required |
 |---|---|---|
-| `PORT` | Port for the Express server | No (default `5000`) |
+| `PORT` | Port for the Express server | No (default `5001`) |
 | `NODE_ENV` | `development` or `production` | No |
 | `MONGO_URI` | MongoDB connection string | **Yes** |
 | `OPENWEATHER_API_KEY` | OpenWeatherMap API key | **Yes** |
@@ -168,13 +168,13 @@ Open `http://localhost:5173` in your browser.
 ### `frontend/.env`
 | Variable | Description | Required |
 |---|---|---|
-| `VITE_API_BASE_URL` | Base URL of the backend API (e.g. `http://localhost:5000/api`) | **Yes** |
+| `VITE_API_BASE_URL` | Base URL of the backend API (e.g. `http://localhost:5001/api`) | **Yes** |
 
 ---
 
 ## API Documentation
 
-Base URL: `http://localhost:5000/api`
+Base URL: `http://localhost:5001/api`
 
 ### `POST /weather`
 Resolves a location, fetches live weather + forecast + air quality + UV/alerts, persists a history record, and returns the full payload (plus an optional `travelVideo`).
@@ -245,7 +245,7 @@ All accept an optional `sessionId` query param to scope the export.
 3. Update the backend's `CLIENT_ORIGIN` to match your deployed frontend URL.
 
 ### Docker (optional)
-Both services are plain Node apps and can be containerized individually with a `node:20-alpine` base image, exposing port `5000` (backend) and serving the built `dist/` folder (frontend) via any static file server or Nginx.
+Both services are plain Node apps and can be containerized individually with a `node:20-alpine` base image, exposing port `5001` (backend) and serving the built `dist/` folder (frontend) via any static file server or Nginx.
 
 ---
 

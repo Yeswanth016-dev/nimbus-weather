@@ -106,6 +106,57 @@ const Settings = () => {
       <div className="mt-6">
         <ExportPanel />
       </div>
+      <div className="mt-8 panel p-6">
+  <div className="mb-5">
+    <h3 className="text-lg font-semibold tracking-wide">
+      🌦️ Project Information
+    </h3>
+    <p className="mt-2 text-sm text-atmosphere-500 dark:text-mist-200/60">
+      Nimbus Weather is a production-ready weather intelligence platform
+      developed using the MERN stack. It provides real-time weather
+      forecasting, search history, AI weather recommendations, PDF exports,
+      and location-based weather monitoring.
+    </p>
+  </div>
+
+  <div className="grid gap-6 md:grid-cols-2 border-t border-black/10 dark:border-white/10 pt-6">
+
+    <div>
+      <h4 className="text-sm font-bold uppercase tracking-wider">
+        Lead Architect & Software Engineer
+      </h4>
+
+      <h3 className="mt-2 text-xl font-bold">
+        Yeswanth Bonthu
+      </h3>
+
+      <p className="mt-3 text-sm text-atmosphere-500 dark:text-mist-200/60">
+        Designed and developed the complete full-stack weather application,
+        including the React frontend, Express.js backend, MongoDB integration,
+        REST APIs, responsive UI, weather analytics, export features, and cloud
+        deployment on Vercel.
+      </p>
+    </div>
+
+    <div>
+      <h4 className="text-sm font-bold uppercase tracking-wider">
+        Program Partner
+      </h4>
+
+      <h3 className="mt-2 text-xl font-bold">
+        PM Accelerator
+      </h3>
+
+      <p className="mt-3 text-sm text-atmosphere-500 dark:text-mist-200/60">
+        Built as part of the PM Accelerator Full-Stack AI Engineering Program,
+        demonstrating production-grade software engineering practices,
+        modern web technologies, cloud deployment, database integration,
+        and AI-assisted application development.
+      </p>
+    </div>
+
+  </div>
+</div>
     </div>
   );
 };
